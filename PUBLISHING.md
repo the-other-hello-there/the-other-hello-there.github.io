@@ -8,7 +8,7 @@ In GitHub Pages settings, select Deploy from a branch and the branch containing 
 
 After deployment, verify:
 - https://the-other-hello-there.github.io/robots.txt displays the crawler rules as plain text.
-- https://the-other-hello-there.github.io/ redirects to /HenryLuo-Portfolio/.
+- https://the-other-hello-there.github.io/ displays the personal landing page and its Engineering Portfolio button opens /HenryLuo-Portfolio/.
 
 No remote was configured when these files were added. If connecting to an existing GitHub repository, first fetch and inspect its history. If it has a different initial commit, clone that repository and copy these site files into the clone rather than force-pushing or copying a .git directory.
 
@@ -25,7 +25,8 @@ Then from GithubMainRepo:
 
 ```powershell
 Copy-Item -LiteralPath ../HenryLuo-Portfolio/robots.txt -Destination ./robots.txt
-git diff -- robots.txt
+Copy-Item -LiteralPath ../HenryLuo-Portfolio/sitemap.xml -Destination ./sitemap.xml
+git diff -- robots.txt sitemap.xml
 ```
 
-Review, commit, and push using your normal Git workflow. Keep sitemap.xml in the HenryLuo-Portfolio repository. Only the generated robots.txt needs to be copied here after policy changes.
+Review, commit, and push using your normal Git workflow. Keep sitemap.xml in both repositories. Copy the generated robots.txt and sitemap.xml here after policy changes. Both sitemap copies intentionally use the same canonical /HenryLuo-Portfolio/ URLs; robots.txt advertises the portfolio copy, so search engines do not need both submitted.
