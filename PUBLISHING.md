@@ -2,7 +2,7 @@
 
 This folder retains its existing Git history and master branch.
 
-Publish this repository to GitHub under the owner the-other-hello-there with the repository name the-other-hello-there.github.io. The local folder name GithubMainRepo is fine.
+Publish this repository to GitHub under the owner the-other-hello-there with the repository name the-other-hello-there.github.io. The local folder name is LandingPage.
 
 In GitHub Pages settings, select Deploy from a branch and the branch containing these files (currently master), with / (root) as the folder.
 
@@ -14,19 +14,19 @@ No remote was configured when these files were added. If connecting to an existi
 
 ## Updating the rules
 
-The source of truth remains ../HenryLuo-Portfolio/scripts/search-selection.json. From the portfolio folder, run:
+The source of truth remains ../EngineeringPortfolio/scripts/search-selection.json. From the portfolio folder, run:
 
 ```powershell
 python scripts/build_search.py
 python scripts/build_search.py --check
 ```
 
-Then from GithubMainRepo:
+Then from LandingPage:
 
 ```powershell
-Copy-Item -LiteralPath ../HenryLuo-Portfolio/robots.txt -Destination ./robots.txt
-Copy-Item -LiteralPath ../HenryLuo-Portfolio/sitemap.xml -Destination ./sitemap.xml
+Copy-Item -LiteralPath ../EngineeringPortfolio/robots.txt -Destination ./robots.txt
+Copy-Item -LiteralPath ../EngineeringPortfolio/scripts/root-sitemap.xml -Destination ./sitemap.xml
 git diff -- robots.txt sitemap.xml
 ```
 
-Review, commit, and push using your normal Git workflow. Keep sitemap.xml in both repositories. Copy the generated robots.txt and sitemap.xml here after policy changes. Both sitemap copies intentionally use the same canonical /HenryLuo-Portfolio/ URLs; robots.txt advertises the portfolio copy, so search engines do not need both submitted.
+Review, commit, and push using your normal Git workflow. Keep sitemap.xml in both repositories. Copy the generated robots.txt and sitemap.xml here after policy changes. The root sitemap includes the personal landing page plus the canonical portfolio URLs and selected image/video metadata. The portfolio sitemap stays scoped to /HenryLuo-Portfolio/. robots.txt advertises both sitemaps.
