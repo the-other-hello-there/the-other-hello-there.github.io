@@ -27,3 +27,9 @@ Explicit user preference: the personal landing page and engineering portfolio mu
 - These replace the former folders under `OneDrive\ME`.
 - Local renaming does not change GitHub repository names or published URLs.
 - Preserve `https://the-other-hello-there.github.io/` and its `/HenryLuo-Portfolio/` website path unless separately requested.
+
+## Agent context files
+
+- AGENTS.md is the single source of agent context for this repository. Record all agent instructions, preferences, and project notes here only.
+- Do not create or update agent-specific context files (for example CLAUDE.md, CLAUDE.local.md, GEMINI.md, .cursorrules, .cursor/rules/, or .github/copilot-instructions.md). They are git-ignored and not shared. If one exists locally, move any useful content into AGENTS.md.
+- AI session and local tool settings (for example .claude/, .cursor/, .codex/, .gemini/) are git-ignored and must not be committed.

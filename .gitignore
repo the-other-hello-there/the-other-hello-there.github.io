@@ -1,0 +1,18 @@
+# Agent context: AGENTS.md is the only shared context file and stays in Git.
+# Agent-specific context files are ignored; put their content in AGENTS.md.
+CLAUDE.md
+CLAUDE.local.md
+GEMINI.md
+.cursorrules
+.windsurfrules
+.clinerules
+.github/copilot-instructions.md
+.github/instructions/
+
+# AI agent session and local settings
+.claude/
+.cursor/
+.codex/
+.gemini/
+.windsurf/
+.aider*
