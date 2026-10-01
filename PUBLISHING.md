@@ -1,10 +1,10 @@
 # Publishing the root site
 
-This folder retains its existing Git history and master branch.
+This folder retains its existing Git history and main branch.
 
 Publish this repository to GitHub under the owner the-other-hello-there with the repository name the-other-hello-there.github.io. The local folder name is LandingPage.
 
-In GitHub Pages settings, select Deploy from a branch and the branch containing these files (currently master), with / (root) as the folder.
+In GitHub Pages settings, select Deploy from a branch and the branch containing these files (currently main), with / (root) as the folder.
 
 After deployment, verify:
 - https://the-other-hello-there.github.io/robots.txt displays the crawler rules as plain text.
